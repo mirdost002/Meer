@@ -1,0 +1,315 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gulistan Seeds - Premium Flower Seeds & Gardening AI</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f4f7f4',
+                            100: '#e5ebe5',
+                            600: '#3a5a40',
+                            700: '#2f483a',
+                            800: '#273c30',
+                        },
+                        accent: {
+                            50: '#fffbf0',
+                            100: '#fef3c7',
+                            500: '#d97706',
+                            600: '#b45309',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #fcfbf7;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans text-stone-800 antialiased selection:bg-primary-100">
+
+    <!-- Notification Banner -->
+    <div class="bg-primary-700 text-white text-center py-2 px-4 text-xs font-medium tracking-wider">
+        🌸 FREE SHIPPING ON ORDERS ABOVE ₹499! USE CODE: <span class="underline font-bold">GULISTAN50</span> 🌸
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-stone-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <span class="text-primary-600"><i data-lucide="flower-2" class="w-8 h-8 stroke-[1.5]"></i></span>
+                <span class="font-serif text-2xl font-bold tracking-tight text-primary-700">Gulistan <span class="text-accent-600 font-sans text-lg font-normal italic">Seeds</span></span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-stone-600">
+                <a href="#shop" class="hover:text-primary-600 transition-colors">Shop Seeds</a>
+                <a href="#about" class="hover:text-primary-600 transition-colors">About Us</a>
+                <a href="#ai-advisor" class="hover:text-primary-600 transition-colors flex items-center gap-1.5 text-accent-600 bg-accent-50 px-3 py-1 rounded-full border border-accent-100">
+                    <i data-lucide="sparkles" class="w-4 h-4"></i> AI Garden Advisor
+                </a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="flex items-center space-x-4">
+                <button onclick="toggleCart()" class="relative p-2 text-stone-700 hover:text-primary-600 transition-colors" aria-label="Open Cart">
+                    <i data-lucide="shopping-bag" class="w-6 h-6 stroke-[1.8]"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 bg-accent-500 text-white text-[10px] font-bold rounded-full w-5 h-5 flex items-center justify-center">0</span>
+                </button>
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-stone-700 hover:text-primary-600 transition-colors" aria-label="Open Menu">
+                    <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden fixed inset-0 z-30 bg-stone-900/40 backdrop-blur-sm">
+        <div class="fixed top-20 left-0 w-full bg-white border-b border-stone-200 py-6 px-4 flex flex-col space-y-4 shadow-xl">
+            <a href="#shop" onclick="toggleMobileMenu()" class="text-lg font-medium text-stone-800 hover:text-primary-600">Shop Seeds</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="text-lg font-medium text-stone-800 hover:text-primary-600">About Us</a>
+            <a href="#ai-advisor" onclick="toggleMobileMenu()" class="text-lg font-medium text-accent-600 flex items-center gap-2">
+                <i data-lucide="sparkles" class="w-5 h-5"></i> AI Garden Advisor
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-b from-primary-50 to-transparent pt-12 pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left z-10">
+                    <div class="inline-flex items-center space-x-2 bg-primary-100 text-primary-700 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+                        <span>🌱 100% Organic & Non-GMO</span>
+                    </div>
+                    <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-stone-900 leading-tight">
+                        Apne ghar ko banayein ek <span class="text-primary-600 underline decoration-accent-500/60 decoration-wavy">Gulistan</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-stone-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Premium quality phoolon ke beej (flower seeds) seedha aapke darwaaze par. Easy to grow, High germination rate, aur beautiful flowers jo aapke garden ko mehka denge.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a href="#shop" class="bg-primary-600 hover:bg-primary-700 text-white font-medium px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2">
+                            Explore Seeds <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#ai-advisor" class="bg-white hover:bg-stone-50 border border-stone-200 text-stone-800 font-medium px-8 py-4 rounded-xl shadow-sm transition-all duration-300 flex items-center justify-center gap-2">
+                            Talk to AI Expert <i data-lucide="sparkles" class="w-5 h-5 text-accent-500"></i>
+                        </a>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="pt-8 border-t border-stone-200/60 grid grid-cols-3 gap-4 text-center lg:text-left max-w-md mx-auto lg:mx-0">
+                        <div>
+                            <span class="block text-2xl font-bold font-serif text-primary-700">98%</span>
+                            <span class="text-xs text-stone-500">Germination Rate</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold font-serif text-primary-700">15+</span>
+                            <span class="text-xs text-stone-500">Flower Varieties</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-bold font-serif text-primary-700">24/7</span>
+                            <span class="text-xs text-stone-500">AI Gardening Support</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Artwork / Preview -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-primary-600 to-accent-100 overflow-hidden shadow-2xl border-8 border-white">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=800" 
+                             alt="Beautiful Garden" 
+                             class="w-full h-full object-cover mix-blend-multiply opacity-90"
+                             onerror="this.src='https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?auto=format&fit=crop&q=80&w=800'">
+                    </div>
+                    <!-- Absolute Badges -->
+                    <div class="absolute top-4 left-4 sm:left-12 bg-white p-3 rounded-2xl shadow-xl border border-stone-100 flex items-center gap-3 animate-bounce" style="animation-duration: 4s;">
+                        <span class="bg-accent-100 text-accent-600 p-2 rounded-lg"><i data-lucide="sun" class="w-5 h-5"></i></span>
+                        <div>
+                            <p class="text-xs font-bold text-stone-800">Summer Blooms</p>
+                            <p class="text-[10px] text-stone-500">Best for this season</p>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-4 right-4 sm:right-12 bg-white p-3 rounded-2xl shadow-xl border border-stone-100 flex items-center gap-3 animate-bounce" style="animation-duration: 5s;">
+                        <span class="bg-primary-100 text-primary-600 p-2 rounded-lg"><i data-lucide="droplet" class="w-5 h-5"></i></span>
+                        <div>
+                            <p class="text-xs font-bold text-stone-800">Easy Watering</p>
+                            <p class="text-[10px] text-stone-500">Perfect for beginners</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Seed Catalog Section -->
+    <section id="shop" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div class="max-w-lg space-y-2">
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">Hamare Seed Collections</h2>
+                    <p class="text-stone-600">Apne pasandeda phoolon ke seeds select karein aur apne garden ko rang-biranga banayein.</p>
+                </div>
+                <!-- Filters -->
+                <div class="mt-6 md:mt-0 flex gap-2 overflow-x-auto hide-scrollbar pb-2">
+                    <button onclick="filterSeeds('all')" id="filter-all" class="filter-btn active-filter px-4 py-2 text-sm font-medium rounded-full transition-all bg-primary-600 text-white shadow-sm">
+                        All Seeds
+                    </button>
+                    <button onclick="filterSeeds('annual')" id="filter-annual" class="filter-btn px-4 py-2 text-sm font-medium rounded-full transition-all bg-stone-100 text-stone-600 hover:bg-stone-200">
+                        Annual (Ek saal)
+                    </button>
+                    <button onclick="filterSeeds('easy')" id="filter-easy" class="filter-btn px-4 py-2 text-sm font-medium rounded-full transition-all bg-stone-100 text-stone-600 hover:bg-stone-200">
+                        Easy to Grow
+                    </button>
+                    <button onclick="filterSeeds('fragrant')" id="filter-fragrant" class="filter-btn px-4 py-2 text-sm font-medium rounded-full transition-all bg-stone-100 text-stone-600 hover:bg-stone-200">
+                        Khushbudaar (Fragrant)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div id="seeds-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Javascript will inject seed cards here -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- AI Gardening Advisor Section -->
+    <section id="ai-advisor" class="py-20 bg-stone-50 border-t border-b border-stone-200/50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center space-y-3 mb-10">
+                <span class="inline-flex items-center gap-1.5 bg-accent-100 text-accent-700 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Powered by Gemini 2.5 Flash
+                </span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">AI Gulistan Expert Se Poochein</h2>
+                <p class="text-stone-600 max-w-xl mx-auto">Beej kab lagane hain? Paani kitna dena hai? Gardening se juda koi bhi sawal poochein aur instant guidance paayein.</p>
+            </div>
+
+            <!-- AI Chat Container -->
+            <div class="bg-white rounded-3xl border border-stone-200 shadow-xl overflow-hidden flex flex-col h-[500px]">
+                <!-- Chat Header -->
+                <div class="bg-primary-700 text-white p-4 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="bg-primary-600 p-2 rounded-full">
+                            <i data-lucide="bot" class="w-5 h-5 text-accent-100"></i>
+                        </div>
+                        <div>
+                            <p class="font-semibold text-sm">Mali AI Expert</p>
+                            <p class="text-[10px] text-primary-200">Online | Ready to help</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Messages Screen -->
+                <div id="chat-messages" class="flex-1 p-6 overflow-y-auto space-y-4 bg-stone-50/50">
+                    <!-- Default welcome message -->
+                    <div class="flex gap-3 max-w-[85%]">
+                        <div class="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center flex-shrink-0 text-primary-600">
+                            <i data-lucide="bot" class="w-4 h-4"></i>
+                        </div>
+                        <div class="bg-white p-4 rounded-2xl rounded-tl-none shadow-sm border border-stone-100 text-sm leading-relaxed text-stone-700">
+                            Namaste! Main aapka **Gulistan Seeds AI Assistant** hoon. Aaj aap apne garden ya flower seeds ke baare mein kya poochna chahte hain? Aap mujhse Hindi/Hinglish mein baat kar sakte hain! 🌱🌸
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input Field -->
+                <div class="p-4 border-t border-stone-100 bg-white">
+                    <form onsubmit="handleSendChat(event)" class="flex gap-2">
+                        <input type="text" id="chat-input" placeholder="E.g., Surajmukhi (Sunflower) ke seeds kab lagayein?" 
+                               class="flex-1 border border-stone-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary-600 focus:ring-1 focus:ring-primary-600" required>
+                        <button type="submit" id="chat-submit-btn" class="bg-primary-600 hover:bg-primary-700 text-white p-3 rounded-xl transition-all duration-200 shadow-md">
+                            <i data-lucide="send" class="w-5 h-5"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-xl mx-auto space-y-3 mb-16">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">Kyu Chunein Gulistan Seeds?</h2>
+                <p class="text-stone-600">Aapka garden hamari zimmedari hai. Hum dete hain best seeds aur behtareen experience.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-3xl border border-stone-200/80 bg-stone-50/50 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-2xl bg-primary-100 text-primary-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="sparkles" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-900 mb-2">High Germination Seeds</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Humare saare beej hand-picked aur labs mein tested hote hain taaki aapko mile lagbhag 100% germination success.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="p-8 rounded-3xl border border-stone-200/80 bg-stone-50/50 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-2xl bg-accent-100 text-accent-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="leaf" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-900 mb-2">100% Organic & Safe</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Koi chemical treatment nahi. Humare seeds environment ke liye bilkul safe hain aur home gardens ke liye perfect hain.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="p-8 rounded-3xl border border-stone-200/80 bg-stone-50/50 hover:bg-white hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-2xl bg-primary-100 text-primary-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="heart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-stone-900 mb-2">Gardening Companion</h3>
+                    <p class="text-stone-600 text-sm leading-relaxed">Hum sirf seeds bechte nahi, unhe ugane me aapka saath dete hain humare AI expert and gardening guidelines ke zariye.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide-out Shopping Cart Drawer -->
+    <div id="cart-drawer" class="hidden fixed inset-0 z-50 overflow-hidden" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+        <div class="absolute inset-0 overflow-hidden">
+            <!-- Background backdrop -->
+            <div onclick="toggleCart()" class="absolute inset-0 bg-stone-900/50 backdrop-blur-sm transition-opacity" aria-hidden="true"></div>
+
+            <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+                <div class="pointer-events-auto w-screen max-w-md">
+                    <div class="flex h-full flex-col bg-white shadow-2xl">
+                        
+                        <!-- Header -->
+                        <div class="flex items-center justify-between px-6 py-6 border-b border-stone-100">
+                            <h2 class="text-lg font-bold text-stone-900 flex items-center gap-2">
+                                <i data-lucide="shopping-bag" class="w-5 h-5 text-primary-600"></i> Aapka Cart
+                            </h2>
+                            <button onclick="toggleCart()" class="p-2 text-stone-400 hover:text-stone-500 rounded-full hover:bg-stone-100 transition-colors">
+                          
